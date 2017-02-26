@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON解析</title>
+</head>
+<body>
+<script>
+	//JSON对象有两个方法：stringify()和parse()
+	var book = {
+		title : 'javascript',
+		authors : [
+			'Tian Pingfan'
+		],
+		adition:3,
+		year:2011,
+		toJSON:function(){
+			return this.title;
+		}
+	};
+	// var jsonText = JSON.stringify(book,function(key,value){
+	// 	switch(key){
+	// 		case 'authors':
+	// 			return value.join(',')
+	// 		case 'year':
+	// 			return 5000;
+	// 		case 'adition':
+	// 			return undefined;
+	// 		default:
+	// 			return value;
+	// 	}
+	// });
+	var jsonText = JSON.stringify(book);
+	console.log(jsonText);
+	var bookCopy = JSON.parse(jsonText);
+	console.log(bookCopy);
+</script>
+</body>
+</html>

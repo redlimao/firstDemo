@@ -1,0 +1,44 @@
+body{padding-top: 40px;}
+.error{background-color: red;}
+.warning{background-color: green;}
+.hello{
+	background-color: #00D0BC;
+	color: #FFFFFF;
+	height: 200px;
+}
+.list{
+	background-color: #E59400;
+	color: #FFFFFF;
+	height: 200px;
+}
+@keyframes fadeIn{
+	form{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@keyframes fadeOut{
+	form{opacity: 1;}
+	to{opacity: 0;}
+}
+
+.hello.ng-enter{
+	-webkit-animation: fadeIn 0.5s ease-in both;
+	-o-animation: fadeIn 0.5s ease-in both;
+	animation: fadeIn 0.5s ease-in both;
+}
+.hello.ng-leave{
+	-webkit-animation: fadeOut 0.5s ease-in both;
+	-o-animation: fadeOut 0.5s ease-in both;
+	animation: fadeOut 0.5s ease-in both;
+}
+
+.list.ng-enter{
+	-webkit-animation: fadeIn 0.5s ease-in both;
+	-o-animation: fadeIn 0.5s ease-in both;
+	animation: fadeIn 0.5s ease-in both;
+}
+.list.ng-leave{
+	-webkit-animation: fadeOut 0.5s ease-in both;
+	-o-animation: fadeOut 0.5s ease-in both;
+	animation: fadeOut 0.5s ease-in both;
+}
